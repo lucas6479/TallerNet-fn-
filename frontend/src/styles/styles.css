@@ -1,0 +1,45 @@
+/* TallerNet — Landing pública | Prefijo: pub- */
+
+/* ==============================
+   1. TOKENS
+   ============================== */
+:root {
+  --pub-section-y: clamp(3.5rem, 10.5vw, 5rem);
+  --pub-font: 'Manrope', sans-serif;
+  --pub-mono: 'Geist Mono', monospace;
+  scroll-behavior: smooth;
+  --r: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --t: .15s ease;
+  --sh-md: 0 4px 14px -2px rgb(0 0 0 / .1), 0 2px 6px -2px rgb(0 0 0 / .06);
+  --sh-lg: 0 10px 28px -4px rgb(0 0 0 / .12), 0 4px 12px -4px rgb(0 0 0 / .07);
+  --ui-primary: #22E58A;
+  --ui-bg: #090B0A;
+  --ui-surface: #121614;
+  --ui-text: #F7FFF9;
+  --ui-muted: #77857C;
+  --ui-border: #28312C;
+  --t-dark: #060808;
+  --t-dark-mid: #090F0C;
+  --t-dark-end: #0D1410;
+  --t-hero-em: #35F39B;
+}
+
+/* ==============================
+   2. BASE
+   ============================== */
+body {
+  background-image: linear-gradient(145deg, var(--t-dark) 0%, var(--t-dark-mid) 55%, var(--t-dark-end) 100%);
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  background-color: var(--ui-bg);
+  color: var(--ui-text);
+  font-family: var(--pub-font);
+  padding-top: .75rem;
+}
+
+.btn {
+  --bs-btn-font-weight: 500;
+}
