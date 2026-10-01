@@ -598,3 +598,125 @@ body {
     padding-top: 2rem;
   }
 }
+
+
+/* ==============================
+   8. SECCIONES GENERALES
+   ============================== */
+.pub-section {
+  padding: var(--pub-section-y) 0;
+}
+
+.pub-section-eyebrow {
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--ui-primary);
+  margin-bottom: .75rem;
+}
+
+.pub-section-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -.03em;
+  color: var(--ui-text);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.pub-section-sub {
+  font-size: 1.0625rem;
+  color: var(--ui-muted);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.pub-bg-b {
+  background: var(--ui-bg);
+}
+
+.pub-screen {
+  min-height: 100vh;
+}
+
+/* ==============================
+   10. PROBLEMA COTIDIANO
+   ============================== */
+.pub-prob-card {
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--r-xl);
+  padding: 2.5rem;
+  transition: border-color 250ms ease;
+}
+
+.pub-prob-card:hover {
+  border-color: color-mix(in srgb, var(--ui-primary) 40%, var(--ui-border));
+}
+
+.pub-prob-header {
+  gap: .875rem;
+  margin-bottom: 2rem;
+}
+
+.pub-prob-num {
+  font-family: var(--pub-mono);
+  font-size: .8125rem;
+  font-weight: 500;
+  color: var(--ui-primary);
+  letter-spacing: .04em;
+}
+
+.pub-prob-cat {
+  font-size: .6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--ui-muted);
+}
+
+.pub-prob-title {
+  font-size: clamp(1.5rem, 2.25vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  color: var(--ui-text);
+  line-height: 1.12;
+  margin: 0 0 auto;
+}
+
+.pub-prob-list {
+  margin: 1.75rem 0 0;
+  border-top: 1px solid var(--ui-border);
+  padding-top: 1.5rem;
+  gap: .75rem;
+}
+
+.pub-prob-list li {
+  font-size: .875rem;
+  color: var(--ui-muted);
+  line-height: 1.5;
+  padding-left: .875rem;
+  position: relative;
+}
+
+.pub-prob-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .5625em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ui-primary);
+}
+
+.pub-prob-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--ui-primary) 10%, var(--ui-surface));
+  border: 1px solid color-mix(in srgb, var(--ui-primary) 22%, var(--ui-border));
+  color: var(--ui-primary);
+  font-size: 1.25rem;
+}
