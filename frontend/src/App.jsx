@@ -1,6 +1,7 @@
 import Navbar            from './components/Navbar'
 import Hero              from './components/Hero'
 import ProblemaCotidiano from './components/ProblemaCotidiano'
+import ComoFunciona      from './components/ComoFunciona'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <main>
         <Hero />
         <ProblemaCotidiano />
+        <ComoFunciona />
       </main>
     </>
   )
