@@ -2,6 +2,7 @@ import Navbar            from './components/Navbar'
 import Hero              from './components/Hero'
 import ProblemaCotidiano from './components/ProblemaCotidiano'
 import ComoFunciona      from './components/ComoFunciona'
+import FlujoDeTrabajo    from './components/FlujoDeTrabajo'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Hero />
         <ProblemaCotidiano />
         <ComoFunciona />
+        <FlujoDeTrabajo />
       </main>
     </>
   )
