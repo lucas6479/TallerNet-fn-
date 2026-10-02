@@ -1,6 +1,22 @@
+import Navbar            from './components/Navbar'
+import Hero              from './components/Hero'
+import ProblemaCotidiano from './components/ProblemaCotidiano'
+import ComoFunciona      from './components/ComoFunciona'
+import FlujoDeTrabajo    from './components/FlujoDeTrabajo'
+import RedDeSucursales   from './components/RedDeSucursales'
+
 function App() {
   return (
-    <main></main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <ProblemaCotidiano />
+        <ComoFunciona />
+        <FlujoDeTrabajo />
+        <RedDeSucursales />
+      </main>
+    </>
   )
 }
 
