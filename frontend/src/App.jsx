@@ -4,6 +4,9 @@ import ProblemaCotidiano from './components/ProblemaCotidiano'
 import ComoFunciona      from './components/ComoFunciona'
 import FlujoDeTrabajo    from './components/FlujoDeTrabajo'
 import RedDeSucursales   from './components/RedDeSucursales'
+import FAQ               from './components/FAQ'
+import Demo              from './components/Demo'
+import Equipo            from './components/Equipo'
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <ComoFunciona />
         <FlujoDeTrabajo />
         <RedDeSucursales />
+        <FAQ />
+        <Demo />
+        <Equipo />
       </main>
     </>
   )
