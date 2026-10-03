@@ -1458,3 +1458,68 @@ body {
     padding-top: .125rem;
   }
 }
+
+/* ==============================
+   13. FAQ
+   ============================== */
+.pub-faq .accordion {
+  --bs-accordion-color: var(--ui-text);
+  --bs-accordion-bg: var(--ui-surface);
+  --bs-accordion-border-color: var(--ui-border);
+  --bs-accordion-btn-color: var(--ui-text);
+  --bs-accordion-btn-bg: var(--ui-surface);
+  --bs-accordion-active-color: var(--ui-primary);
+  --bs-accordion-active-bg: var(--ui-surface);
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.pub-faq .accordion-item {
+  background: var(--ui-surface);
+  border-radius: var(--r-lg);
+  margin-bottom: .75rem;
+  overflow: hidden;
+}
+
+.pub-faq .accordion-item+.accordion-item {
+  border-top: 1px solid var(--ui-border);
+}
+
+.pub-faq .accordion-button {
+  font-family: var(--pub-font);
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: none;
+}
+
+.pub-faq .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  border-bottom: 1px solid var(--ui-border);
+}
+
+.pub-faq .accordion-button::after {
+  filter: brightness(0) invert(0.6);
+}
+
+.pub-faq-ico {
+  font-size: .875rem;
+  color: var(--ui-muted);
+  margin-right: .75rem;
+  flex-shrink: 0;
+  transition: color 200ms ease;
+}
+
+.pub-faq .accordion-button:not(.collapsed) .pub-faq-ico {
+  color: var(--ui-primary);
+}
+
+.pub-faq .pub-section-sub {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.pub-faq .accordion-body {
+  font-size: .875rem;
+  line-height: 1.7;
+  color: var(--ui-muted);
+  padding-top: .75rem;
+}
