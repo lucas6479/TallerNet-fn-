@@ -6,6 +6,7 @@ import FlujoDeTrabajo    from './components/FlujoDeTrabajo'
 import RedDeSucursales   from './components/RedDeSucursales'
 import FAQ               from './components/FAQ'
 import Demo              from './components/Demo'
+import Equipo            from './components/Equipo'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <RedDeSucursales />
         <FAQ />
         <Demo />
+        <Equipo />
       </main>
     </>
   )
