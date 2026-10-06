@@ -111,7 +111,7 @@ frontend/
 | Asistente / personaje Hero | `src/components/AsistenteHero.jsx`           | 🚧 Creado / pendiente de integrar |
 | Footer                     | —                                            | ⏳ Pendiente                    |
 | Botón volver al inicio     | —                                            | ⏳ Pendiente                    |
-| Secciones de Leandro (FAQ, Demo, Equipo, Chatbot) | —               | ⏳ Pendiente                    |
+| Secciones de Leandro (FAQ, Demo, Equipo, Chatbot) | —               | ✅ Implementado                    |
 
 ---
 
