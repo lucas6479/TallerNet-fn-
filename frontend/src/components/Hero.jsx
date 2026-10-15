@@ -1,132 +1,133 @@
-import { motion } from 'motion/react'
 import AsistenteHero from './AsistenteHero'
+import Reveal from './ui/Reveal'
 
 function Hero() {
   return (
-    <section id="inicio" className="pub-hero d-flex flex-column overflow-hidden">
-      <div className="container d-flex flex-column justify-content-between">
-
-        <div className="row align-items-center pub-hero-row g-5">
-
+    <section id="inicio" className="min-vh-100 pt-2 pb-4 py-lg-5 d-flex align-items-start align-items-lg-center overflow-hidden">
+      <div className="container">
+        <div className="row align-items-center g-5">
           {/* Copy */}
-          <motion.div
-            className="col-lg-5 pub-hero-copy d-flex flex-column justify-content-center text-center text-lg-start align-items-center align-items-lg-start"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.4,
-              delay: 0.1,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-          >
-            <p className="pub-hero-eyebrow">TALLERNET · GESTIÓN CONECTADA</p>
-            <h1 className="pub-hero-title">
+          <Reveal className="col-lg-5 text-center text-lg-start">
+            <p className="small fw-medium text-uppercase text-primary mb-4">TALLERNET · GESTIÓN CONECTADA</p>
+            <h1 className="display-5 fw-semibold lh-1 text-white mb-4">
               Todo tu taller. Una sola operación.
             </h1>
-            <p className="pub-hero-sub mx-auto mx-lg-0">
+            <p className="text-white text-opacity-75 lh-lg mx-auto mx-lg-0 mb-3">
               Vehículos, órdenes, repuestos y sucursales conectados en un mismo lugar.
             </p>
-            <p className="pub-hero-note mx-auto mx-lg-0">
+            <p className="text-white text-opacity-50 lh-lg mx-auto mx-lg-0 mb-5">
               Sabé qué está pasando en cada taller sin depender de papeles, planillas o mensajes.
             </p>
-            <div className="pub-hero-actions d-flex flex-wrap justify-content-center justify-content-lg-start mb-lg-0">
-              <a href="#demo" className="btn-hero-primary">
-                <i className="bi bi-arrow-right pub-nav-cta-arr-2" aria-hidden="true"></i>
-                <span className="pub-nav-cta-text">Solicitar demo</span>
-                <span className="pub-nav-cta-circle"></span>
-                <i className="bi bi-arrow-right pub-nav-cta-arr-1" aria-hidden="true"></i>
+            <div className="text-center text-lg-start mb-4 mb-lg-0">
+              <a href="#demo" className="btn pub-demo-btn btn-lg">
+                Solicitar demo
+                <i className="bi bi-arrow-right ms-2" aria-hidden="true"></i>
               </a>
             </div>
-          </motion.div>
+          </Reveal>
 
           {/* Dashboard mockup */}
-          <motion.div
-            className="col-lg-7 d-none d-sm-block"
-            initial={{ opacity: 0, y: 22, scale: 0.985 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{
-              duration: 1.6,
-              delay: 0.4,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-          >
+          <Reveal className="col-lg-7 d-none d-sm-block">
             <div className="position-relative">
               <div className="pub-hero-mascot d-none d-lg-block">
                 <AsistenteHero />
               </div>
-            <div className="pub-mock">
-              <div className="pub-mock-chrome">
-                <div className="pub-mock-dots">
-                  <span className="pub-mock-dot"></span>
-                  <span className="pub-mock-dot"></span>
-                  <span className="pub-mock-dot"></span>
-                </div>
-                <span className="pub-mock-chrome-title">TallerNet · Dashboard</span>
-              </div>
-              <div className="pub-mock-body">
-                <div className="pub-mock-kpis">
-                  <div className="pub-mock-kpi">
-                    <div className="pub-mock-kpi-val">12</div>
-                    <div className="pub-mock-kpi-label">En taller</div>
+              <div className="card-100 overflow-hidden rounded-3 border border-primary border-opacity-25 shadow-lg">
+
+                {/* Chrome */}
+                <div className="d-flex align-items-center gap-2 px-3 py-2 border-bottom border-secondary border-opacity-25">
+                  <div className="d-flex gap-1 flex-shrink-0">
+                    <span className="d-inline-block p-1 rounded-circle bg-secondary bg-opacity-50"></span>
+                    <span className="d-inline-block p-1 rounded-circle bg-secondary bg-opacity-50"></span>
+                    <span className="d-inline-block p-1 rounded-circle bg-secondary bg-opacity-50"></span>
                   </div>
-                  <div className="pub-mock-kpi">
-                    <div className="pub-mock-kpi-val">9</div>
-                    <div className="pub-mock-kpi-label">Órdenes activas</div>
-                  </div>
-                  <div className="pub-mock-kpi pub-mock-kpi--warn">
-                    <div className="pub-mock-kpi-val">3</div>
-                    <div className="pub-mock-kpi-label">Stock bajo</div>
-                  </div>
-                  <div className="pub-mock-kpi">
-                    <div className="pub-mock-kpi-val">2</div>
-                    <div className="pub-mock-kpi-label">Transferencias pend.</div>
-                  </div>
+                  <small className="text-secondary text-opacity-50 mx-auto">TallerNet · Dashboard</small>
                 </div>
 
-                <div className="pub-mock-section-label">Vehículos activos</div>
+                {/* Body */}
+                <div className="p-3">
 
-                <div className="pub-mock-table">
-                  <div className="pub-mock-thead">
-                    <span>Patente</span>
-                    <span>Vehículo</span>
-                    <span>Estado</span>
-                    <span>Mecánico</span>
+                  {/* KPIs */}
+                  <div className="row row-cols-4 g-2 mb-3">
+                    <div className="col">
+                      <div className="border border-secondary border-opacity-25 rounded-1 p-2">
+                        <div className="fw-semibold text-white">12</div>
+                        <div className="small text-secondary">En taller</div>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="border border-secondary border-opacity-25 rounded-1 p-2">
+                        <div className="fw-semibold text-white">9</div>
+                        <div className="small text-secondary">Órdenes activas</div>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="border border-warning border-opacity-25 rounded-1 p-2">
+                        <div className="fw-semibold text-warning">3</div>
+                        <div className="small text-secondary">Stock bajo</div>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="border border-secondary border-opacity-25 rounded-1 p-2">
+                        <div className="fw-semibold text-white">2</div>
+                        <div className="small text-secondary">Transferencias pend.</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="pub-mock-row">
-                    <span className="pub-mock-plate">ABC 123</span>
-                    <span>Toyota Corolla</span>
-                    <span><span className="pub-mock-badge pub-mock-badge--repair">En reparación</span></span>
-                    <span className="pub-mock-muted">M. García</span>
+
+                  {/* Section label */}
+                  <p className="small text-secondary text-uppercase fw-semibold mb-2">Vehículos activos</p>
+
+                  {/* Tabla */}
+                  <div className="table-responsive">
+                    <table className="table table-dark table-sm align-middle mb-0">
+                      <thead>
+                        <tr>
+                          <th>Patente</th>
+                          <th>Vehículo</th>
+                          <th>Estado</th>
+                          <th>Mecánico</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span className="badge bg-secondary bg-opacity-25 text-white text-opacity-75 font-monospace fw-bold rounded-1">ABC 123</span></td>
+                          <td>Toyota Corolla</td>
+                          <td><span className="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 fw-medium px-2 py-1">En reparación</span></td>
+                          <td className="text-secondary">M. García</td>
+                        </tr>
+                        <tr>
+                          <td><span className="badge bg-secondary bg-opacity-25 text-white text-opacity-75 font-monospace fw-bold rounded-1">DEF 456</span></td>
+                          <td>Volkswagen Gol</td>
+                          <td><span className="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 fw-medium px-2 py-1">Listo</span></td>
+                          <td className="text-secondary">A. Torres</td>
+                        </tr>
+                        <tr>
+                          <td><span className="badge bg-secondary bg-opacity-25 text-white text-opacity-75 font-monospace fw-bold rounded-1">GHI 789</span></td>
+                          <td>Ford Ranger</td>
+                          <td><span className="badge rounded-pill bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25 fw-medium px-2 py-1">Esperando repuesto</span></td>
+                          <td className="text-secondary">L. Pérez</td>
+                        </tr>
+                        <tr>
+                          <td><span className="badge bg-secondary bg-opacity-25 text-white text-opacity-75 font-monospace fw-bold rounded-1">JKL 012</span></td>
+                          <td>Renault Clio</td>
+                          <td><span className="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 fw-medium px-2 py-1">En reparación</span></td>
+                          <td className="text-secondary">P. Ramírez</td>
+                        </tr>
+                        <tr>
+                          <td><span className="badge bg-secondary bg-opacity-25 text-white text-opacity-75 font-monospace fw-bold rounded-1">MNO 345</span></td>
+                          <td>Honda Civic</td>
+                          <td><span className="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 fw-medium px-2 py-1">Listo</span></td>
+                          <td className="text-secondary">N. López</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <div className="pub-mock-row">
-                    <span className="pub-mock-plate">DEF 456</span>
-                    <span>VW Golf</span>
-                    <span><span className="pub-mock-badge pub-mock-badge--done">Listo</span></span>
-                    <span className="pub-mock-muted">A. Torres</span>
-                  </div>
-                  <div className="pub-mock-row">
-                    <span className="pub-mock-plate">GHI 789</span>
-                    <span>Ford Ranger</span>
-                    <span><span className="pub-mock-badge pub-mock-badge--wait">Esperando repuesto</span></span>
-                    <span className="pub-mock-muted">L. Pérez</span>
-                  </div>
-                  <div className="pub-mock-row">
-                    <span className="pub-mock-plate">JKL 012</span>
-                    <span>Renault Clio</span>
-                    <span><span className="pub-mock-badge pub-mock-badge--repair">En reparación</span></span>
-                    <span className="pub-mock-muted">P. Ramírez</span>
-                  </div>
-                  <div className="pub-mock-row">
-                    <span className="pub-mock-plate">MNO 345</span>
-                    <span>Honda Civic</span>
-                    <span><span className="pub-mock-badge pub-mock-badge--done">Listo</span></span>
-                    <span className="pub-mock-muted">N. López</span>
-                  </div>
+
                 </div>
               </div>
             </div>
-            </div>
-          </motion.div>
+          </Reveal>
 
         </div>
 
