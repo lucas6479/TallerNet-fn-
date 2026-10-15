@@ -1,0 +1,337 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Admin",
+      "email": "admin@admin",
+      "password": "1234",
+      "rol": "administrador",
+      "sucursalId": null
+    },
+    {
+      "id": "2",
+      "nombre": "Marcos Herrera",
+      "email": "encargado@e",
+      "password": "1234",
+      "rol": "encargado",
+      "sucursalId": 1
+    }
+  ],
+  "sucursales": [
+    {
+      "id": "1",
+      "nombre": "Sucursal Central",
+      "direccion": "Av. Rivadavia 4520",
+      "ciudad": "Buenos Aires",
+      "telefono": "011-4567-8901"
+    },
+    {
+      "id": "2",
+      "nombre": "Sucursal Norte",
+      "direccion": "Ruta 8 Km 42",
+      "ciudad": "San Isidro",
+      "telefono": "011-4789-2341"
+    },
+    {
+      "id": "3",
+      "nombre": "Sucursal Sur",
+      "direccion": "Av. Calchaquí 1200",
+      "ciudad": "Quilmes",
+      "telefono": "011-4254-6780"
+    }
+  ],
+  "vehiculos": [
+    {
+      "id": "1",
+      "patente": "ABC 123",
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "anio": 2019,
+      "cliente": "Roberto Sánchez",
+      "sucursalId": 2
+    },
+    {
+      "id": "2",
+      "patente": "DEF 456",
+      "marca": "Ford",
+      "modelo": "Focus",
+      "anio": 2021,
+      "cliente": "Laura Giménez",
+      "sucursalId": 1
+    },
+    {
+      "id": "3",
+      "patente": "GHI 789",
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "anio": 2018,
+      "cliente": "Hernán Pérez",
+      "sucursalId": 1
+    },
+    {
+      "id": "4",
+      "patente": "JKL 012",
+      "marca": "Volkswagen",
+      "modelo": "Golf",
+      "anio": 2020,
+      "cliente": "Sofía Rodríguez",
+      "sucursalId": 2
+    },
+    {
+      "id": "5",
+      "patente": "MNO 345",
+      "marca": "Renault",
+      "modelo": "Sandero",
+      "anio": 2022,
+      "cliente": "Diego Martínez",
+      "sucursalId": 2
+    },
+    {
+      "id": "6",
+      "patente": "PQR 678",
+      "marca": "Peugeot",
+      "modelo": "208",
+      "anio": 2017,
+      "cliente": "Natalia López",
+      "sucursalId": 2
+    },
+    {
+      "id": "7",
+      "patente": "STU 901",
+      "marca": "Honda",
+      "modelo": "Civic",
+      "anio": 2023,
+      "cliente": "Carlos Fernández",
+      "sucursalId": 3
+    },
+    {
+      "id": "8",
+      "patente": "VWX 234",
+      "marca": "Fiat",
+      "modelo": "Cronos",
+      "anio": 2021,
+      "cliente": "Valeria Torres",
+      "sucursalId": 3
+    }
+  ],
+  "ordenes": [
+    {
+      "id": "1",
+      "vehiculoId": "2",
+      "sucursalId": 1,
+      "patente": "DEF 456",
+      "vehiculo": "Ford Focus",
+      "sucursal": "Sucursal Central",
+      "motivo": "Cambio de aceite y filtro",
+      "kilometraje": 62000,
+      "estado": "activa",
+      "fechaIngreso": "2026-10-10"
+    },
+    {
+      "id": "2",
+      "vehiculoId": "3",
+      "sucursalId": 1,
+      "patente": "GHI 789",
+      "vehiculo": "Chevrolet Cruze",
+      "sucursal": "Sucursal Central",
+      "motivo": "Falla en el sistema de frenos",
+      "kilometraje": 95000,
+      "estado": "en_espera",
+      "fechaIngreso": "2026-10-11"
+    },
+    {
+      "id": "3",
+      "vehiculoId": "2",
+      "sucursalId": 1,
+      "patente": "DEF 456",
+      "vehiculo": "Ford Focus",
+      "sucursal": "Sucursal Central",
+      "motivo": "Revisión de correa de distribución",
+      "kilometraje": 58000,
+      "estado": "completada",
+      "fechaIngreso": "2026-10-01"
+    },
+    {
+      "id": "4",
+      "vehiculoId": "1",
+      "sucursalId": 2,
+      "patente": "ABC 123",
+      "vehiculo": "Toyota Corolla",
+      "sucursal": "Sucursal Norte",
+      "motivo": "Ruido en suspensión delantera",
+      "kilometraje": 74000,
+      "estado": "activa",
+      "fechaIngreso": "2026-10-09"
+    },
+    {
+      "id": "5",
+      "vehiculoId": "4",
+      "sucursalId": 2,
+      "patente": "JKL 012",
+      "vehiculo": "Volkswagen Golf",
+      "sucursal": "Sucursal Norte",
+      "motivo": "Diagnóstico por luz de check engine",
+      "kilometraje": 48000,
+      "estado": "en_espera",
+      "fechaIngreso": "2026-10-12"
+    },
+    {
+      "id": "6",
+      "vehiculoId": "5",
+      "sucursalId": 2,
+      "patente": "MNO 345",
+      "vehiculo": "Renault Sandero",
+      "sucursal": "Sucursal Norte",
+      "motivo": "Cambio de pastillas de freno delanteras",
+      "kilometraje": 31000,
+      "estado": "activa",
+      "fechaIngreso": "2026-10-13"
+    },
+    {
+      "id": "7",
+      "vehiculoId": "6",
+      "sucursalId": 2,
+      "patente": "PQR 678",
+      "vehiculo": "Peugeot 208",
+      "sucursal": "Sucursal Norte",
+      "motivo": "Reemplazo de batería y revisión del alternador",
+      "kilometraje": 120000,
+      "estado": "completada",
+      "fechaIngreso": "2026-09-28"
+    },
+    {
+      "id": "8",
+      "vehiculoId": "7",
+      "sucursalId": 3,
+      "patente": "STU 901",
+      "vehiculo": "Honda Civic",
+      "sucursal": "Sucursal Sur",
+      "motivo": "Revisión de embrague y caja de cambios",
+      "kilometraje": 53000,
+      "estado": "activa",
+      "fechaIngreso": "2026-10-08"
+    },
+    {
+      "id": "9",
+      "vehiculoId": "8",
+      "sucursalId": 3,
+      "patente": "VWX 234",
+      "vehiculo": "Fiat Cronos",
+      "sucursal": "Sucursal Sur",
+      "motivo": "Reparación de sistema de aire acondicionado",
+      "kilometraje": 40000,
+      "estado": "en_espera",
+      "fechaIngreso": "2026-10-07"
+    },
+    {
+      "id": "10",
+      "vehiculoId": "7",
+      "sucursalId": 3,
+      "patente": "STU 901",
+      "vehiculo": "Honda Civic",
+      "sucursal": "Sucursal Sur",
+      "motivo": "Cambio de amortiguadores y alineación",
+      "kilometraje": 50000,
+      "estado": "completada",
+      "fechaIngreso": "2026-09-30"
+    }
+  ],
+  "repuestos": [
+    {
+      "id": "1",
+      "nombre": "Filtro de aceite",
+      "referencia": "FLT-001",
+      "stock": 18,
+      "stockMinimo": 5,
+      "sucursalId": 1
+    },
+    {
+      "id": "2",
+      "nombre": "Pastillas de freno delantera",
+      "referencia": "FRE-001",
+      "stock": 3,
+      "stockMinimo": 4,
+      "sucursalId": 1
+    },
+    {
+      "id": "3",
+      "nombre": "Correa de distribución",
+      "referencia": "COR-001",
+      "stock": 6,
+      "stockMinimo": 3,
+      "sucursalId": 1
+    },
+    {
+      "id": "4",
+      "nombre": "Aceite de motor 5W-30",
+      "referencia": "ACE-001",
+      "stock": 2,
+      "stockMinimo": 6,
+      "sucursalId": 1
+    },
+    {
+      "id": "5",
+      "nombre": "Filtro de aire",
+      "referencia": "FLT-002",
+      "stock": 10,
+      "stockMinimo": 4,
+      "sucursalId": 2
+    },
+    {
+      "id": "6",
+      "nombre": "Amortiguador trasero",
+      "referencia": "AMO-001",
+      "stock": 1,
+      "stockMinimo": 2,
+      "sucursalId": 2
+    },
+    {
+      "id": "7",
+      "nombre": "Bujías NGK estándar (x4)",
+      "referencia": "BUJ-001",
+      "stock": 14,
+      "stockMinimo": 4,
+      "sucursalId": 2
+    },
+    {
+      "id": "8",
+      "nombre": "Líquido de frenos DOT 4",
+      "referencia": "LIQ-001",
+      "stock": 5,
+      "stockMinimo": 3,
+      "sucursalId": 2
+    },
+    {
+      "id": "9",
+      "nombre": "Disco de freno delantero",
+      "referencia": "FRE-002",
+      "stock": 4,
+      "stockMinimo": 2,
+      "sucursalId": 3
+    },
+    {
+      "id": "10",
+      "nombre": "Bobina de encendido",
+      "referencia": "BOB-001",
+      "stock": 1,
+      "stockMinimo": 2,
+      "sucursalId": 3
+    },
+    {
+      "id": "11",
+      "nombre": "Batería 12V 60Ah",
+      "referencia": "BAT-001",
+      "stock": 3,
+      "stockMinimo": 2,
+      "sucursalId": 3
+    },
+    {
+      "id": "12",
+      "nombre": "Filtro de combustible",
+      "referencia": "FLT-003",
+      "stock": 0,
+      "stockMinimo": 3,
+      "sucursalId": 3
+    }
+  ]
+}
