@@ -1,93 +1,80 @@
-import { motion } from 'motion/react'
+import Reveal from './ui/Reveal'
 
 function Demo() {
   return (
-    <section id="demo" className="pub-cta pub-screen pub-bg-a d-flex flex-column justify-content-center position-relative overflow-hidden">
-      <div className="container position-relative">
+    <section id="demo" className="min-vh-100 py-5 d-flex flex-column justify-content-center">
+      <div className="container">
         <div className="row align-items-center g-5">
-
           {/* Intro */}
-          <motion.div
-            className="col-lg-5"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-          >
-            <span className="pub-section-eyebrow d-block">Solicitar demo</span>
-            <h2 className="pub-cta-title">Probá TallerNet en tu taller</h2>
-            <p className="pub-cta-sub">
+          <Reveal className="col-lg-5" onScroll>
+            <span className="small text-primary text-uppercase fw-medium">Solicitar demo</span>
+            <h2 className="display-6 mb-3">Probá TallerNet en tu taller</h2>
+            <p className="lead text-white text-opacity-50">
               Completá el formulario y te contactamos para mostrarte cómo funciona.
             </p>
-            <ul className="pub-demo-trust">
-              <li className="d-flex align-items-start">
-                <i className="bi bi-check2" aria-hidden="true"></i>
+            <ul className="list-group list-group-flush mt-4">
+              <li className="list-group-item d-flex align-items-start gap-2 bg-transparent border-secondary border-opacity-25 px-0 small text-secondary">
+                <i className="bi bi-check2 text-primary mt-1" aria-hidden="true"></i>
                 Demo personalizada según tu taller
               </li>
-              <li className="d-flex align-items-start">
-                <i className="bi bi-check2" aria-hidden="true"></i>
+              <li className="list-group-item d-flex align-items-start gap-2 bg-transparent border-secondary border-opacity-25 px-0 small text-secondary">
+                <i className="bi bi-check2 text-primary mt-1" aria-hidden="true"></i>
                 Sin compromiso de contratación
               </li>
-              <li className="d-flex align-items-start">
-                <i className="bi bi-check2" aria-hidden="true"></i>
+              <li className="list-group-item d-flex align-items-start gap-2 bg-transparent border-secondary border-opacity-25 px-0 small text-secondary">
+                <i className="bi bi-check2 text-primary mt-1" aria-hidden="true"></i>
                 Empezás cuando estés listo
               </li>
             </ul>
-          </motion.div>
+          </Reveal>
 
           {/* Formulario */}
-          <motion.div
-            className="col-lg-6 offset-lg-1"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
-          >
-            <div className="pub-demo-form">
-              <div className="row g-3">
+          <Reveal className="col-lg-7" onScroll>
+            <div className="card rounded-4 border border-secondary border-opacity-25">
+              <div className="card-body p-4">
+                <div className="row g-3">
 
-                <div className="col-12">
-                  <label className="form-label" htmlFor="f-nombre">Nombre</label>
-                  <input id="f-nombre" type="text" className="form-control" placeholder="Tu nombre" />
+                  <div className="col-12">
+                    <label className="form-label fw-medium" htmlFor="f-nombre">Nombre</label>
+                    <input id="f-nombre" type="text" className="form-control" placeholder="Tu nombre" />
+                  </div>
+
+                  <div className="col-12">
+                    <label className="form-label fw-medium" htmlFor="f-taller">Nombre del taller</label>
+                    <input id="f-taller" type="text" className="form-control" placeholder="Nombre de tu taller o empresa" />
+                  </div>
+
+                  <div className="col-sm-6">
+                    <label className="form-label fw-medium" htmlFor="f-sucursales">Cantidad de sucursales</label>
+                    <select id="f-sucursales" className="form-select">
+                      <option value="">Seleccioná…</option>
+                      <option>1</option>
+                      <option>2 a 5</option>
+                      <option>6 o más</option>
+                    </select>
+                  </div>
+
+                  <div className="col-sm-6">
+                    <label className="form-label fw-medium" htmlFor="f-telefono">Teléfono</label>
+                    <input id="f-telefono" type="tel" className="form-control" placeholder="+54 11 …" />
+                  </div>
+
+                  <div className="col-12">
+                    <label className="form-label fw-medium" htmlFor="f-email">Email</label>
+                    <input id="f-email" type="email" className="form-control" placeholder="tu@email.com" />
+                  </div>
+
+                  <div className="col-12 pt-1">
+                    <button type="submit" className="btn pub-demo-btn btn-lg w-100">
+                      Solicitar demo
+                      <i className="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+
                 </div>
-
-                <div className="col-12">
-                  <label className="form-label" htmlFor="f-taller">Nombre del taller</label>
-                  <input id="f-taller" type="text" className="form-control" placeholder="Nombre de tu taller o empresa" />
-                </div>
-
-                <div className="col-sm-6">
-                  <label className="form-label" htmlFor="f-sucursales">Cantidad de sucursales</label>
-                  <select id="f-sucursales" className="form-select">
-                    <option value="">Seleccioná…</option>
-                    <option>1</option>
-                    <option>2 a 5</option>
-                    <option>6 o más</option>
-                  </select>
-                </div>
-
-                <div className="col-sm-6">
-                  <label className="form-label" htmlFor="f-telefono">Teléfono</label>
-                  <input id="f-telefono" type="tel" className="form-control" placeholder="+54 11 …" />
-                </div>
-
-                <div className="col-12">
-                  <label className="form-label" htmlFor="f-email">Email</label>
-                  <input id="f-email" type="email" className="form-control" placeholder="tu@email.com" />
-                </div>
-
-                <div className="col-12 pt-1">
-                  <button type="button" className="pub-nav-cta pub-nav-cta--form w-100">
-                    <i className="bi bi-arrow-right pub-nav-cta-arr-2" aria-hidden="true"></i>
-                    <span className="pub-nav-cta-text">Solicitar demo</span>
-                    <span className="pub-nav-cta-circle"></span>
-                    <i className="bi bi-arrow-right pub-nav-cta-arr-1" aria-hidden="true"></i>
-                  </button>
-                </div>
-
               </div>
             </div>
-          </motion.div>
+          </Reveal>
 
         </div>
       </div>

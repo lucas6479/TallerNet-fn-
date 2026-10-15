@@ -1,5 +1,5 @@
-export const teamMembers = [
-  { initials: 'JC', name: 'Cordero Juan Javier', role: 'Desarrollador full-stack'  },
-  { initials: 'LV', name: 'Valdez Leandro',      role: 'Desarrollador front-end'   },
-  { initials: 'LC', name: 'Cordero Lucas Jesus', role: 'Desarrollador front-end'   },
+export const integrantes = [
+  { siglas: 'JC', nombre: 'Cordero Juan Javier', rol: 'Desarrollador full-stack'  },
+  { siglas: 'LV', nombre: 'Valdez Leandro',      rol: 'Desarrollador front-end'   },
+  { siglas: 'LC', nombre: 'Cordero Lucas Jesus', rol: 'Desarrollador front-end'   },
 ]
