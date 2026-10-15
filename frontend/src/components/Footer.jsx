@@ -40,7 +40,7 @@ function Footer() {
 
         <hr className="border-secondary border-opacity-25 mt-5 mb-4" />
 
-        <span className="small text-white text-opacity-25">© 2026 TallerNet · Todos los derechos reservados.</span>
+        <span className="small text-white text-opacity-25">© 2026 TallerNet - Todos los derechos reservados.</span>
 
       </div>
     </footer>
