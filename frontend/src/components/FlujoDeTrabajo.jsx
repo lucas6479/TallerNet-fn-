@@ -1,44 +1,29 @@
-import { motion } from 'motion/react'
-import { workflowSteps } from '../data/flujoDeTrabajoData'
+import Reveal from './ui/Reveal'
+import { pasosFlujo } from '../data/flujoDeTrabajoData'
 
 function FlujoDeTrabajo() {
   return (
-    <section id="flujo" className="pub-section pub-screen pub-bg-b d-flex flex-column justify-content-center">
+    <section id="como-funciona" className="py-5 min-vh-100 d-flex flex-column  justify-content-center">
       <div className="container">
 
-        <motion.div
-          className="text-center mb-5"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-        >
-          <span className="pub-section-eyebrow d-block">Flujo de trabajo</span>
-          <h2 className="pub-section-title">De ingreso a entrega</h2>
-          <p className="pub-section-sub mx-auto">El recorrido completo de una orden de trabajo.</p>
-        </motion.div>
+        <Reveal className="text-center mb-5" onScroll>
+          <span className="small text-primary text-uppercase fw-medium">Flujo de trabajo</span>
+          <h2 className="display-6 mb-3">De ingreso a entrega</h2>
+          <p className="lead text-white text-opacity-50">El recorrido completo de una orden de trabajo.</p>
+        </Reveal>
 
-        <div className="pub-flow d-flex align-items-start">
-          {workflowSteps.map((step, index) => (
-            <motion.div
-              key={step.num}
-              className="pub-flow-step"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.1 }}
-            >
-              <div className="pub-flow-node-wrap d-flex flex-column align-items-center">
-                <span className="pub-flow-num">{step.num}</span>
-                <div className="pub-flow-dot d-flex align-items-center justify-content-center position-relative">
-                  <i className={`bi ${step.icon}`} aria-hidden="true"></i>
-                </div>
+        <div className="row g-5 text-center">
+          {pasosFlujo.map((step) => (
+            <Reveal key={step.num} className="col-md-3" onScroll>
+              <span className="fs-5 font-monospace text-primary">{step.num}</span>
+              <div className="my-4">
+                <span className="d-inline-flex align-items-center justify-content-center border border-primary border-opacity-25 rounded-circle p-3 lh-1">
+                  <i className={`bi ${step.icon} fs-3 text-primary`} aria-hidden="true"></i>
+                </span>
               </div>
-              <div className="pub-flow-content">
-                <h3 className="pub-flow-title">{step.title}</h3>
-                <p className="pub-flow-text">{step.text}</p>
-              </div>
-            </motion.div>
+              <h3 className="fs-6 mb-3 mt-4">{step.title}</h3>
+              <p className="text-secondary">{step.text}</p>
+            </Reveal>
           ))}
         </div>
 
